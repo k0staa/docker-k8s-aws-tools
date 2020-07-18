@@ -23,3 +23,5 @@ substituting `--env-file` value with your env file and `--name` value with new c
 ## Available tools
 K9S, kubectl, eksctl,aws.
 
+## License
+Check [LICENSE.md](LICENSE.md) file.
