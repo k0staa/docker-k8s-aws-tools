@@ -1,0 +1,3 @@
+*.sh
+!example_run.sh
+.env*
