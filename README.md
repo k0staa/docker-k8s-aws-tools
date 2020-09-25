@@ -19,9 +19,18 @@ docker run -it --rm --env-file ./example_env  --network host --name kubernetes-y
 ```
 substituting `--env-file` value with your env file and `--name` value with new container name.
 
+## Using user without cluster privileges
+If your user doesn't have kubernetes permission you can still use it with this project. Please use `example_run_without_kubernetes.sh` script to see how to create running scripts. 
+
+## Docker usage
+You can also want to use docker to push/pull from your AWS  ECR, then you just need to simply add:
+```
+-v /var/run/docker.sock:/var/run/docker.sock
+```
+to your run script. Please use appropriate path to docker socket in your host. 
 
 ## Available tools
-K9S, kubectl, eksctl,aws.
+K9S, kubectl, eksctl,aws, docker.
 
 ## License
 Check [LICENSE.md](LICENSE.md) file.
