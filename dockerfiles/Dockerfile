@@ -26,6 +26,15 @@ RUN cd /tmp \
     && curl --silent --location "https://github.com/derailed/k9s/releases/download/v0.20.5/k9s_Linux_x86_64.tar.gz" | tar xz -C ./ \
     && mv ./k9s /usr/local/bin
 
+RUN cd /tmp \
+    && curl "https://releases.hashicorp.com/terraform/0.12.31/terraform_0.12.31_linux_amd64.zip" -o terraform.zip \ 
+    && unzip terraform.zip \
+    && mv ./terraform /usr/local/bin
+
+ADD https://github.com/gruntwork-io/terragrunt/releases/download/v0.23.31/terragrunt_linux_amd64 /usr/local/bin/terragrunt
+RUN chmod +x /usr/local/bin/terragrunt
+
+
 RUN apt-get update -y && apt install -y vim less jq docker.io
 
 ENTRYPOINT ["sh","-c"," aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $K8S_CLUSTER_NAME && bash"]

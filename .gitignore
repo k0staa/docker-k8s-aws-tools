@@ -3,3 +3,4 @@
 !example_run_without_kubernetes.sh
 .env*
 !build.sh
+/*/
