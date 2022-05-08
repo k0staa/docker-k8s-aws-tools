@@ -1,5 +1,5 @@
 # AWS K8S HELM EKSCTL K9S tools
-Do you have many AWS environments and want to easly switch beetween configuration? This project is for you! 
+Do you have many AWS environments and want to easly switch beetween configuration and between different computers? This project is for you! 
 No need to install any of the K8S and AWS tools, just run `build.sh` script and then follow below instructions.
 
 
@@ -30,7 +30,7 @@ You can also want to use docker to push/pull from your AWS  ECR, then you just n
 to your run script. Please use appropriate path to docker socket in your host. 
 
 ## Available tools
-K9S, kubectl, eksctl,aws, docker.
+K9S, kubectl, eksctl, aws, terraform, terragrunt, docker.
 
 ## License
 Check [LICENSE.md](LICENSE.md) file.

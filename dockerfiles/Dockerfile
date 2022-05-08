@@ -23,11 +23,11 @@ RUN cd /tmp \
     && mv ./eksctl /usr/local/bin
 
 RUN cd /tmp \
-    && curl --silent --location "https://github.com/derailed/k9s/releases/download/v0.20.5/k9s_Linux_x86_64.tar.gz" | tar xz -C ./ \
+    && curl --silent --location "https://github.com/derailed/k9s/releases/download/v0.25.18/k9s_Linux_x86_64.tar.gz" | tar xz -C ./ \
     && mv ./k9s /usr/local/bin
 
 RUN cd /tmp \
-    && curl "https://releases.hashicorp.com/terraform/0.12.31/terraform_0.12.31_linux_amd64.zip" -o terraform.zip \ 
+    && curl "https://releases.hashicorp.com/terraform/1.1.9/terraform_1.1.9_linux_amd64.zip" -o terraform.zip \ 
     && unzip terraform.zip \
     && mv ./terraform /usr/local/bin
 
