@@ -31,7 +31,7 @@ RUN cd /tmp \
     && unzip terraform.zip \
     && mv ./terraform /usr/local/bin
 
-ADD https://github.com/gruntwork-io/terragrunt/releases/download/v0.23.31/terragrunt_linux_amd64 /usr/local/bin/terragrunt
+ADD https://github.com/gruntwork-io/terragrunt/releases/download/v0.37.0/terragrunt_linux_amd64 /usr/local/bin/terragrunt
 RUN chmod +x /usr/local/bin/terragrunt
 
 
